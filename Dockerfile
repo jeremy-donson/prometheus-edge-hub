@@ -19,7 +19,7 @@ COPY . .
 
 RUN go build -i -o /build/bin/prometheus-edge-hub
 
-FROM alpine:3.11
+FROM alpine:3.18.3
 
 COPY --from=go /build/bin/prometheus-edge-hub /bin/prometheus-edge-hub
 
